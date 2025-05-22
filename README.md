@@ -1,2 +1,13 @@
-# BookEase
-A full-stack hotel reservation system built with the MERN stack (MongoDB, Express.js, React.js, Node.js). Users can browse and book hotel rooms, while admins can manage room listings and reservations. Designed to be responsive and mobile-friendly.
+# BookEase – MERN Hotel Reservation System
+
+BookEase is a full-stack hotel booking application built with the MERN stack (MongoDB, Express.js, React.js, Node.js). It allows users to browse available hotel rooms, make bookings, and manage reservations. Admins can manage room listings, availability, and bookings through a secure dashboard.
+
+---
+
+## 🔧 Tech Stack
+
+- **Frontend**: React.js, Tailwind CSS (or Bootstrap)
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB (via Mongoose)
+- **Authentication**: Clerk
+- **API Testing**: Postman
