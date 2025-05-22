@@ -6,7 +6,7 @@ Bookify is a full-stack hotel booking application built with the MERN stack (Mon
 
 ## 🔧 Tech Stack
 
-- **Frontend**: React.js, Tailwind CSS (or Bootstrap)
+- **Frontend**: React.js, Tailwind CSS 
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB (via Mongoose)
 - **Authentication**: Clerk
