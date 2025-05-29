@@ -1,3 +1,6 @@
+import User from "../models/user.js"
+import { Webhook } from "svix"
+
 const clerkwebhook = async (req, res) => {
     try {
         const hook = new Webhook(process.env.CLERK_WEBHOOK)
@@ -37,3 +40,4 @@ const clerkwebhook = async (req, res) => {
         res.status(400).json({ success: false, message: error.message })
     }
 }
+export default clerkwebhook
