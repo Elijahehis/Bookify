@@ -7,7 +7,7 @@ const bookingRouter = express.Router()
 bookingRouter.post("/check-availability", checkAvaliabilityApi)
 bookingRouter.post("/book", protect, createBooking)
 bookingRouter.get("/user", protect, getUsersBooking)
-bookingRouter.post("/hotel", protect, getHotelBooking)
+bookingRouter.get("/hotel", protect, getHotelBooking)
 //userRouter.post("/store-recent-serach", protect, storeRecentSeachCities)
 
 export default bookingRouter
