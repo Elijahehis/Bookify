@@ -1,9 +1,34 @@
 import React, { useState } from 'react'
 import Title from '../components/Title'
-import { assets, userBookingsDummyData } from '../assets/assets'
+import { assets } from '../assets/assets'
+import { useAppContext } from '../context/AppContext'
+import { useEffect } from 'react'
 
 const MyBookings = () => {
-    const [bookings, setBookings] = useState(userBookingsDummyData)
+    const { currency, user, axios, getToken } = useAppContext()
+    const [bookings, setBookings] = useState([])
+
+    const fetchUserBooking = async () => {
+        try {
+            const { data } = await axios.get("/api/booking/user", { headers: { Authorization: `Bearer ${await getToken()}` } })
+            if (data.success) {
+                setBookings(data.bookings)
+            } else {
+                toast.error(data.message)
+            }
+        } catch (error) {
+            toast.error(error.message)
+        }
+    }
+
+
+    useEffect(() => {
+        if (user) {
+            fetchUserBooking()
+        }
+    }, [user])
+
+
     return (
         <div className='py-28 md:pb-35 md:pt-32 px-4 md:px-16 lg:px-24 xl:px-32'>
             <Title title="My Bookings" subtitle="Easily manage your past, current, and upcoming hotel reservations in one place. Plan your trips seamlessly with just a few clicks" align="left" />
@@ -32,7 +57,7 @@ const MyBookings = () => {
                                     <img src={assets.guestsIcon} alt="guest-icon" />
                                     <span>Guests{booking.guests}</span>
                                 </div>
-                                <p className="text-base">Total:{booking.totalPrice}</p>
+                                <p className="text-base">Total: {currency}{booking.totalPrice}</p>
                             </div>
                         </div>
                         {/* date */}
