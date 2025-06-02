@@ -4,7 +4,9 @@ Bookify is a full-stack hotel reservation platform built with the **MERN stack**
 
 ---
 
+
 ## 📁 Project Structure
+
 
 ```
 📦 Bookify
@@ -23,6 +25,22 @@ Bookify is a full-stack hotel reservation platform built with the **MERN stack**
 ---
 
 ## 🚀 Getting Started Locally
+
+## 📦 Prerequisites
+
+Ensure the following are installed **before** running this project:
+
+| Tool | Check | Install Command |
+|------|-------|------------------|
+| Node.js (v18 or higher) | ✅ `node -v` | [Download here](https://nodejs.org/en) |
+| npm | ✅ `npm -v` | Comes with Node.js |
+| Git | ✅ `git --version` | [Install Git](https://git-scm.com/downloads) |
+
+> If you're on macOS/Linux, you can install Node via:
+```bash
+brew install node     # macOS with Homebrew
+sudo apt install nodejs npm    # Ubuntu/Debian
+
 
 ### 🔹 Clone the Repo
 
@@ -143,12 +161,24 @@ npm run dev
 
 ## 📸 Screenshots
 
-> ![Homepage Screenshot](screenshots/homepage.png)
-  ![Hotel Owner Dashboard Screenshot](screenshots/owner%20dashbaord.png)
-  ![Add Room Screenshot](screenshots/add-room.png)
-  ![List Rooms Screenshot](screenshots/list-rooms.png)
-  ![Featured Destination Screenshot](screenshots/Featured%20Destinantion.png)
-  ![My Bookings Screenshot](screenshots/my-booking.png)
+> ### 🏠 Homepage
+![Homepage Screenshot](screenshots/homepage.png)
+
+### 📊 Hotel Owner Dashboard
+![Hotel Owner Dashboard Screenshot](screenshots/owner-dashboard.png)
+
+### 🏨 Add Room
+![Add Room Screenshot](screenshots/add-room.png)
+
+### 🛏️ List Rooms
+![List Rooms Screenshot](screenshots/list-rooms.png)
+
+### 🌍 Featured Destination
+![Featured Destination Screenshot](screenshots/featured-destination.png)
+
+### 📚 My Bookings
+![My Bookings Screenshot](screenshots/my-booking.png)
+
 
 ---
 
