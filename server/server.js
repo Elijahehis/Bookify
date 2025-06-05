@@ -9,6 +9,7 @@ import hotelRouter from "./routes/hotel.js";
 import connectCloudinary from "./configs/cloudinary.js";
 import roomRouter from "./routes/roomRoutes.js";
 import bookingRouterRouter from "./routes/bookingRoutes.js";
+import { stripeWebHooks } from "./controller/stripeWebhooks.js";
 
 const startServer = async () => {
     try {
@@ -18,6 +19,10 @@ const startServer = async () => {
         const app = express();
 
         app.use(cors());
+
+        app.post("/api/stripe", express.raw({ type: "application/json" }), stripeWebHooks)
+
+
         app.use(express.json());
         app.use(clerkMiddleware());
 
