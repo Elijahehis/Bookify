@@ -144,7 +144,7 @@ export const stripePayment = async (req, res) => {
         const line_items = [
             {
                 price_data: {
-                    currency: "usd",
+                    currency: "pln",
                     product_data: {
                         name: roomData.hotel.name,
                     },
