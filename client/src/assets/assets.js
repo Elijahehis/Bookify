@@ -77,10 +77,16 @@ export const assets = {
 }
 
 export const cities = [
-    "Dubai",
-    "Singapore",
-    "New York",
-    "London",
+    "Warszawa",   // Warsaw
+  "Kraków",     // Krakow
+  "Gdańsk",
+  "Wrocław",
+  "Poznań",
+  "Szczecin",
+  "Lublin",
+  "Katowice",
+  "Bydgoszcz",
+  "Łódź"
 ];
 
 // Exclusive Offers Dummy Data
