@@ -5,7 +5,7 @@ import { useUser, useAuth, } from "@clerk/clerk-react";
 import { toast } from "react-hot-toast";
 
 axios.defaults.baseURL = import.meta.env.VITE_BACKENF_URL;
-axios.defaults.withCredentials = true;
+
 
 const AppContext = createContext();
 
