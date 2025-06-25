@@ -59,21 +59,25 @@ npm install
 Create a `.env` file in the `/server` directory with the following (replace with your real values):
 
 ```env
-MONGODB_URL=your_mongodb_connection_url
+CLERK_PUBLISHABLE_KEY="your-clerk-publishable-key"
+CLERK_SECRET_KEY="your-clerk-secret-key"
+CLERK_WEBHOOK="your-clerk-webhook-secret"
 
-CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
-CLERK_SECRET_KEY=your_clerk_secret_key
-CLERK_WEBHOOK=your_clerk_webhook_secret
+CLOUDINARY_API_KEY="your-cloudinary-api-key"
+CLOUDINARY_CLOUD_NAME="your-cloudinary-cloud-name"
+CLOUDINARY_SECRET_KEY="your-cloudinary-secret-key"
 
-CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
-CLOUDINARY_API_KEY=your_cloudinary_api_key
-CLOUDINARY_SECRET_KEY=your_cloudinary_secret_key
+CURRENCY="your-default-currency"
 
-CURRENCY=z
+MONGODB_URL="your-mongodb-connection-uri"
 
-SENDER_EMAIL=your_sender_email
-SMTP_USER=your_smtp_user
-SMTP_PASS=your_smtp_password
+SENDER_EMAIL="your-sender-email@example.com"
+SMTP_PASS="your-smtp-password"
+SMTP_USER="your-smtp-username"
+
+STRIPE_PUBLISHABLE_KEY="your-stripe-publishable-key"
+STRIPE_SECRET_KEY="your-stripe-secret-key"
+STRIPE_WEBHOOK_SECRET="your-stripe-webhook-secret"
 ```
 
 Then run the backend server:
@@ -85,16 +89,19 @@ npm run server
 ### 🔹 Setup the Frontend
 
 ```bash
-cd ../client
+Open a new terminal and run
+
+cd client
+
 npm install
 ```
 
 Create a `.env` file in the `/client` directory with:
 
 ```env
-VITE_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
-VITE_BACKEND_URL=http://localhost:3000/
-VITE_CURRENCY=z
+VITE_BACKEND_URL="https://bookify-backend-nine.vercel.app/"
+VITE_CLERK_PUBLISHABLE_KEY="your-clerk-publishable-key"
+VITE_CURRENCY="your-default-currency"
 ```
 
 Then start the frontend app:
